@@ -20,7 +20,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.countries)
     return (
       <div className="App">
         <Navbar />
@@ -31,7 +30,7 @@ class App extends React.Component {
             </div>
             <div className="col-7">
               <Switch>
-                <Route exact path="/country/:country" component={(props) => <CountryDetails Countries={this.state.countries} props = {props} />} />
+                <Route exact path="/country/:country" component={CountryDetails} />
                 <Redirect to="/" />
               </Switch>
             </div>
